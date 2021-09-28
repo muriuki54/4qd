@@ -41,7 +41,7 @@ showTab(0);
 Object.keys(innerTabs).forEach(key => new Slide(+key));
 console.log(innerTabs);
 function Slide(key) {
-    this.size = controllerTabs[key].clientWidth;
+    this.size = controllerTabs[0].clientWidth;
     this.startIndex = 0;
     this.stepsIndicator = controllerTabs[key].querySelector(".controller_tab_steps_indicator");
     this.innerTabs = controllerTabs[key].querySelectorAll(".inner_tab");
@@ -50,7 +50,7 @@ function Slide(key) {
     this.goToNextButton = controllerTabs[key].querySelector(".inner_tab_controls .go_to_next");
 
     this.translateX= function() {
-        console.log(key);
+        
         innerTabs[key].style.transform = "translate("+this.startIndex * -this.size+"px)";
         this.stepsIndicator.style.backgroundSize = ""+(this.startIndex/(this.innerTabs.length-1))*100+"% 100%";
         
