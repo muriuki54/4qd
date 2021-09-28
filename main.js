@@ -3,6 +3,9 @@ const controllerTabs = document.querySelectorAll(".controller_tab");
 
 const innerTabs = document.querySelectorAll(".tab_inner_details");
 
+const reverseDisplay = document.querySelector("strong#reverse_required");
+const reverseRequiredCheckbox = document.querySelector("#application_reverse_checkbox");
+
 /** TABS */
 Object.keys(tabSelectors).forEach(key => {
     tabSelectors[key].addEventListener("click", () => {
@@ -39,7 +42,7 @@ showTab(0);
 /** INNER TABS */
 
 Object.keys(innerTabs).forEach(key => new Slide(+key));
-console.log(innerTabs);
+
 function Slide(key) {
     this.size = controllerTabs[0].clientWidth;
     this.startIndex = 0;
@@ -75,3 +78,16 @@ function Slide(key) {
 }
 
 /** END INNER TABS */
+
+
+/**CHECKBOX      */
+
+reverseRequiredCheckbox.addEventListener("change", function () {
+    if(this.checked) {
+        reverseDisplay.innerText = "Yes";
+    } else {
+        reverseDisplay.innerText = "No";
+    }
+})
+
+/** END CHECKBOX */

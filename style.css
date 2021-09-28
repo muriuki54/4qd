@@ -40,6 +40,10 @@ body {
 .btn--secondary {
     background-color: var(--secondary-color);
 }
+
+.controller_select_wrapper a {
+    color: var(--secondary-color);
+}
 /* wrapper */
 
 .controller_select_wrapper .controller_select_wrapper_inner {
@@ -130,7 +134,7 @@ body {
 }
 
 .controller_tab {
-    height: 300px
+    min-height: 300px
 }
 
 .controller_tab_steps_indicator {
@@ -195,6 +199,181 @@ body {
 
 /* end inner tabs */
 
+/*choose by application */
+
+.application_dropdown {
+    background-color: #e4e4e4;
+    padding-top: 40px;
+}
+
+.applications_placeholder {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.applications_placeholder p {
+    padding-left: 10px;
+    color: #7e7e7e;
+    cursor: pointer;
+}
+.applications_placeholder .fas {
+    text-align: right;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+}
+.application_dropdown ul {
+    margin: 0;
+    padding-inline-start: 0;
+    padding: 10px 0px;
+    position: relative;
+    margin-top: 40px;
+    background-color: #ffff;
+}
+
+.application_dropdown ul::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #ffffff;
+    border-left: 20px solid transparent;
+}
+
+.application_dropdown li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.application_dropdown li:not(:last-child) {
+    border-bottom: 1px solid rgb(134, 134, 134);
+}
+
+.application_dropdown img {
+    width: 30px;
+}
+
+/* tab 2*/
+
+.application_input_options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+}
+
+.application_input_options div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.application_input_options div > input[type="number"],
+.application_input_options select {
+    padding: 15px 10px;
+    width: 100%;
+    background: var(--secondary-color-light);
+    border: none;
+    outline: 0;
+}
+
+.application_input_options input[type="checkbox"] {
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: var(--secondary-color-light);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+}
+
+.application_input_options input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: var(--primary-color);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.application_input_options input[type="checkbox"]::after {
+    content: "\f00d";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    bottom: 5px;
+    color: #000;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.application_input_options input:checked[type="checkbox"]::after {
+    content: "\f00c";
+    left: 10px;
+    color: #fff;
+}
+
+.application_input_options input:checked[type="checkbox"] {
+    background: var(--secondary-color);
+}
+
+.application_input_options input:checked[type="checkbox"]::before {
+    left: calc(100% - 35px);
+}
+
+/* tab 3 */
+.controller_results {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.controller_results_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controller_results_left img {
+    width: 50%;
+}
+
+ul.results_list {
+    list-style: none;
+}
+
 @media(max-width: 768px) {
     .controller_select_wrapper .tab_selector img {
         display: none;
@@ -202,5 +381,13 @@ body {
 
     .tab_selector strong {
         font-size: 14px;
+    }
+
+    .application_input_options {
+        grid-template-columns: 1fr;
+    }
+
+    .controller_results {
+        grid-template-columns: 1fr;
     }
 }
