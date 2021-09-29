@@ -63,33 +63,44 @@
                                     <i class="fas fa-bars fa-2x"></i>
                                 </div>
                                 <ul>
-                                    <li>Greenpower kart <img src="./images/green-energy.png" alt="greenpower" /></li>
-                                    <li>Electric vehicle <img src="./images/electric-car.png" alt="electric vehicle" /></li>
-                                    <li>Model loco <img src="./images/train.png" alt="model locomotive" /></li>
-                                    <li>Electric boat <img src="./images/boat.png" alt="electric boat" /></li>
+                                    <li>Industrial machine</li>
+                                    <li>Model Loco</li>
+                                    <li>Toylander</li>
+                                    <li>Greenpower car</li>
+                                    <li>Electric boat</li>
+                                    <li>Electric kart</li>
+                                    <li>Golf buggy</li>
+                                    <li>Robot</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="inner_tab">
                             <form action="">
                                 <div class="application_input_options">
-                                    <div>
-                                        <select name="" id="">
-                                            <option value="">Loco size</option>
-                                            <option value="">option 2</option>
-                                            <option value="">option 3</option>
-                                            <option value="">option 4</option>
-                                        </select>
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <select name="" id="">
+                                                <option value="">Loco size</option>
+                                                <option value="">option 2</option>
+                                                <option value="">option 3</option>
+                                                <option value="">option 4</option>
+                                            </select>
+                                        </div>
+                                    
+                                        <div class="input_group_inner">
+                                            <input type="number" placeholder="No. of passengers" >
+                                        </div>
                                     </div>
 
-                                    <div>
-                                        <input type="number" placeholder="No. of passengers" >
-                                    </div>
-
-                                    <div>
-                                        <strong>Is reverse required ?</strong>
-                                        <input type="checkbox" id="application_reverse_checkbox">
-                                        <strong id="reverse_required">No</strong>
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <div class="flex_items justify_content_between align_items_center">
+                                                <strong>Is reverse required ?</strong>
+                                                <input type="checkbox" checked class="reverse_checkbox">
+                                                <strong class="reverse_required_display">Yes</strong>
+                                            </div>
+                                        </div>
+                                        <div class="input_group_inner"></div>
                                     </div>
                                 </div>
                             </form>
@@ -104,25 +115,16 @@
                                     <ul class="results_list">
                                         <li>
                                             <h2><a href="#">Controller 1</a></h2>
-                                            <h3>Description</h3>
+                                            <strong>Description</strong>
                                             <p>The description goes here</p>
-                                            <h3>Notes</h3>
+                                            <strong>Notes</strong>
                                             <p>The notes will be set according to selection logic</p>
                                         </li>
-
                                         <li>
-                                            <h2><a href="#">Controller 2</a></h2>
-                                            <h3>Description</h3>
+                                            <h2><a href="#">Controller 1</a></h2>
+                                            <strong>Description</strong>
                                             <p>The description goes here</p>
-                                            <h3>Notes</h3>
-                                            <p>The notes will be set according to selection logic</p>
-                                        </li>
-
-                                        <li>
-                                            <h2><a href="#">Controller 3</a></h2>
-                                            <h3>Description</h3>
-                                            <p>The description goes here</p>
-                                            <h3>Notes</h3>
+                                            <strong>Notes</strong>
                                             <p>The notes will be set according to selection logic</p>
                                         </li>
                                     </ul>
@@ -146,24 +148,150 @@
                     <div class="controller_tab_steps_indicator">
                         <div class="step step1 current"><p>1</p></div>
                         <div class="step step2"><p>2</p></div>
-                        <div class="step step3"><p>3</p></div>
-                        <div class="step step3"><p>4</p></div>
                     </div>
                     <!--- steps indicator----->
 
                      <!-----inner tabs ----->
                      <div class="tab_inner_details">
                         <div class="inner_tab">
-                            inner tab 2: 1
+                            <form action="">
+
+                                <div class="input_group">
+                                    <div class="input_group_inner">
+                                        <label>Voltage</label>
+                                        <select name="" id="">
+                                            <option value="">Select voltage</option>
+                                            <option value="">12</option>
+                                            <option value="">24</option>
+                                            <option value="">36</option>
+                                            <option value="">48</option>
+                                            <option value="">78</option>
+                                            <option value="">84</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="input_group">
+                                    
+                                    <div class="input_group_inner range_wrapper">
+                                        <label>Nominal motor current(1 A - 360 A)</label>
+                                        <input 
+                                            type="range" 
+                                            id="current_ac_rating" 
+                                            list="nominal_motor_current_data_list" 
+                                            name="current-ac-seer-rating" 
+                                            min="1" 
+                                            max="360" 
+                                            value="1" 
+                                            step="1" 
+                                        />    
+                                        <datalist id="nominal_motor_current_data_list">
+                                            <option value="1" label="1"></option>
+                                            <option value="360" label="360"></option>
+                                        </datalist>    
+                                        <div class="range_tooltip">1</div>                            
+                                    </div>
+                                    
+                                    <strong>OR</strong>
+
+                                    <div class="input_group_inner range_wrapper">
+                                        <label>Related motor power(1 Watt- 3000 Watts)</label>
+                                        <input 
+                                            type="range" 
+                                            id="current_ac_rating" 
+                                            list="nominal_motor_current_data_list" 
+                                            name="current-ac-seer-rating" 
+                                            min="1" 
+                                            max="360" 
+                                            value="1" 
+                                            step="1" 
+                                        />    
+                                        <datalist id="nominal_motor_current_data_list">
+                                            <option value="1" label="1"></option>
+                                            <option value="3000" label="3000"></option>
+                                        </datalist>    
+                                        <div class="range_tooltip">1</div>                                     </div>
+                                </div>
+
+                                <div class="input_group">
+                                    <div class="input_group_inner range_wrapper">
+                                        <label>No. of motors</label>
+                                        <input 
+                                            type="range" 
+                                            id="current_ac_rating" 
+                                            list="no_of_motors" 
+                                            name="current-ac-seer-rating" 
+                                            min="1" 
+                                            max="10" 
+                                            value="1" 
+                                            step="1" 
+                                        />    
+                                        <datalist id="no_of_motors">
+                                            <option value="1" label="1"></option>
+                                            <option value="10" label="10"></option>
+                                        </datalist>    
+                                        <div class="range_tooltip">1</div> 
+                                    </div>
+                                </div>
+
+                                <div class="input_group">
+                                    <div class="input_group_inner">
+                                        <label>Motor type</label>
+                                        <select name="" id="">
+                                            <option value="">Brushed - Permanent magnet</option>
+                                            <option value="">Brushed - Series wound</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_group_inner">
+                                        <div class="flex_items justify_content_between align_items_center">
+                                            <strong>Is reverse required ?</strong>
+                                            <input type="checkbox" checked class="reverse_checkbox">
+                                            <strong class="reverse_required_display">Yes</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="inner_tab">
-                            inner tab 2: 2
-                        </div>
-                        <div class="inner_tab">
-                            inner tab 2: 3
-                        </div>
-                        <div class="inner_tab">
-                            inner tab 2: 4
+                        <div class="inner_tab choose_by_motor_results">
+                            <!--- select by motor results -->
+
+                            <!--- calculated loads ------>
+                            <div class="calculated_loads">
+                                <div class="calculated_load">
+                                    <p>Nominal motor current(Amps)</p>
+                                    <h2>50</h2>
+                                </div>
+                                <div class="calculated_load">
+                                    <p>Likely stalled motor current(Amps))</p>
+                                    <h2>150</h2>
+                                </div>
+                            </div>
+                            <!--- end calculated loads --->
+
+                            <!--suggested controllers------->
+                            <h2><center>Suggested controllers</center></h2>
+
+                            <div class="controller_results_right choose_motor_results">
+                                <img src="./images/motor.png" alt="">
+                                <ul class="results_list">
+                                    <li>
+                                        <h2><a href="#">Controller 1</a></h2>
+                                        <strong>Description</strong>
+                                        <p>The description goes here</p>
+                                        <strong>Notes</strong>
+                                        <p>The notes will be set according to selection logic</p>
+                                    </li>
+                                    <li>
+                                        <h2><a href="#">Controller 2</a></h2>
+                                        <strong>Description</strong>
+                                        <p>The description goes here</p>
+                                        <strong>Notes</strong>
+                                        <p>The notes will be set according to selection logic</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!--- end suggested controllers-->
                         </div>
                     </div>
                     <!---end inner tabs---->
@@ -184,20 +312,160 @@
 
                         <div class="step step2"><p>2</p></div>
 
-                        <div class="step step3"><p>3</p></div>
+                        <div class="step step2"><p>3</p></div>
                     </div>
                     <!--- steps indicator----->
 
                     <!-----inner tabs ----->
                     <div class="tab_inner_details">
+
                         <div class="inner_tab">
-                            inner tab 3: 1
+                            <div class="application_dropdown">
+                                <div class="applications_placeholder">
+                                    <p>Choose application</p>
+                                    <i class="fas fa-bars fa-2x"></i>
+                                </div>
+                                <ul>
+                                    <!-- <li>Greenpower kart <img src="./images/green-energy.png" alt="greenpower" /></li>
+                                    <li>Electric vehicle <img src="./images/electric-car.png" alt="electric vehicle" /></li>
+                                    <li>Model loco <img src="./images/train.png" alt="model locomotive" /></li>
+                                    <li>Electric boat <img src="./images/boat.png" alt="electric boat" /></li> -->
+                                    <li>Industrial machine</li>
+                                    <li>Model Loco</li>
+                                    <li>Toylander</li>
+                                    <li>Greenpower car</li>
+                                    <li>Electric boat</li>
+                                    <li>Electric kart</li>
+                                    <li>Golf buggy</li>
+                                    <li>Robot</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="inner_tab">
-                            inner tab 3: 2
+                            <form action="">
+                                <div class="application_input_options">
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Loco size</label>
+                                            <select name="" id="">
+                                                <option value="">Loco size</option>
+                                                <option value="">option 2</option>
+                                                <option value="">option 3</option>
+                                                <option value="">option 4</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input_group_inner">
+                                            <label>No. of passengers</label>
+                                            <input type="number" placeholder="No. of passengers" >
+                                        </div>
+                                    </div>
+
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Voltage</label>
+                                            <select name="" id="">
+                                                <option value="">Voltage</option>
+                                                <option value="1">12</option>
+                                                <option value="1">24</option>
+                                                <option value="1">36</option>
+                                                <option value="1">48</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="input_group_inner">
+                                            <label>No. of motors</label>
+                                            <input type="number" placeholder="No. of motors">
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Nominal motor current(A)</label>
+                                            <input type="number" placeholder="Nominal motor current(A)">
+                                        </div>
+                                        
+                                        <strong>OR</strong>
+                                    
+                                        <div class="input_group_inner">
+                                            <label>Rated motor power(W)</label>
+                                            <input type="number" placeholder="Rated motor power(W)">
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Motor type</label>
+                                            <select name="" id="">
+                                                <option value="">Motor type</option>
+                                                <option value="Brushed">Brushed</option>
+                                                <option value="series wound">Series wound</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input_group_inner">
+                                            <div class="flex_items justify_content_between align_items_center">
+                                                <strong>Is reverse required ?</strong>
+                                                <input type="checkbox" checked class="reverse_checkbox">
+                                                <strong class="reverse_required_display">Yes</strong>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Additional information</label>
+                                            <textarea name="" id="" cols="30" rows="10" placeholder="Additional details"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </form>
                         </div>
                         <div class="inner_tab">
-                            inner tab 3: 3
+                            <!--- results for let us choose --->
+                            <strong>Selected options</strong>
+                            <ul class="let_us_choose_options">
+                                <li><strong>Application type :</strong> Loco</li>
+                                <li><strong>No. of passengers :</strong> 12</li>
+                                <li><strong>Voltage :</strong> 24V</li>
+                                <li><strong>Nominal motor current(A) :</strong> </li>
+                                <li><strong>Rated motor power(W) :</strong> </li>
+                            </ul>
+
+                            <!--end results for let us choose -->
+
+                            <h3>Submit a query</h3>
+                            <form action="">
+                                <div class="form_inner">
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Name</label>
+                                            <input type="text" placeholder="Your name">
+                                        </div>
+
+                                        <div class="input_group_inner">
+                                            <label>Email</label>
+                                            <input type="email" placeholder="Enter email address" >
+                                        </div>
+                                    </div>
+
+                                    <div class="input_group">
+                                        <div class="input_group_inner">
+                                            <label>Query details</label>
+                                            <textarea name="" placeholder="Enter query details" id="" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="input_group">
+                                        <button class="btn btn--secondary">Submit <i class="far fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <!---end inner tabs---->
